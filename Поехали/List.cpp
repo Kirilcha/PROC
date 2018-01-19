@@ -14,7 +14,7 @@ void Init(List **begin)        // инициализаци€
 	(*begin)->next = NULL;
 }
 
-void Free(List **begin, ofstream &ofst)       // освобождаем пам€ть, дл€ этого начало передаем
+void Free(List **begin, ofstream &ofst)       //  освобождаем пам€ть (дл€ этого начало передаем)
 {
 	if (*begin == 0)
 		return;
@@ -47,7 +47,7 @@ void InList(List **begin, ifstream &ifst)    // или же
 		else
 		{
 			end->next = new List; // указатель выдел€ет пам€ть под новый эл
-			end = end->next;  // и авн€етс€ след эл 
+			end = end->next;  // равн€етс€ след эл 
 			end->a = (*InKlad(ifst));
 			end->next = NULL;
 			kol++;
@@ -56,7 +56,7 @@ void InList(List **begin, ifstream &ifst)    // или же
 }
 
 
-void OutList(List **b, ofstream &ofst)        // в док
+void OutList(List **b, ofstream &ofst)      // в док
 {
 	List *p = *b;
 	int i = 1;
@@ -72,7 +72,7 @@ void OutList(List **b, ofstream &ofst)        // в док
 	while (p)
 	{
 		ofst << i << ": ";
-		OutKlad(&(p)->a, ofst);     /////// p->a € разъименовываю и отправл€ю значение переменной 
+		OutKlad(&(p)->a, ofst);     
 		p = p->next;
 		i++;
 	}
