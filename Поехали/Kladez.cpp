@@ -17,7 +17,7 @@ void OutAf(Aforizm &aftor, ofstream &ofst);
 
 
 
-Kladez* InKlad(ifstream &ifst)   
+Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";
@@ -41,20 +41,21 @@ Kladez* InKlad(ifstream &ifst)
 	case 1:
 		klad->key = Kladez::key::AFORIZM;
 		readAf(klad->afor, ifst);  // отправляем в функцию(АФ) полученные данные
-		return klad; // возвращаем полученный эл
+		break;
 	case 2:
 		klad->key = Kladez::key::POSL_P;
 		readPosl(klad->poslov, ifst);
-		return klad;
+		break;
 	default:    // нет совпадений -> нет записи
-		exit;
+		return 0;
 	}
-
+	ifst >> klad->ocenka;
+	ifst.get();
+	return klad;
 }
 
 void OutKlad(Kladez* a, ofstream &ofst)        // в док
 {
-
 	ofst << '"' << a->fraza << '"';
 	switch (a->key)
 	{
@@ -64,5 +65,13 @@ void OutKlad(Kladez* a, ofstream &ofst)        // в док
 		break;
 	default:
 		ofst << "Ошибка!" << endl;
+	}
+	if (a->ocenka > 10 || a->ocenka < 0)
+	{
+		ofst << "Оценка не соответствует 10 бальной шкале!" << endl;
+	}
+	else
+	{
+		ofst << "Субъективная оценка изречения по десятибалльной шкале = " << a->ocenka << endl;
 	}
 }

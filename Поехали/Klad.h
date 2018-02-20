@@ -10,6 +10,7 @@ struct Kladez
 {
 	enum key { AFORIZM = 1, POSL_P };
 	key key;
+	int ocenka;
 	std::string fraza;
 	union
 	{
