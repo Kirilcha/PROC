@@ -1,5 +1,5 @@
-﻿Построение начато 21.11.2017 20:09:44.
-     1>Проект "C:\m\1.1\Поехали\Поехали.vcxproj" в узле 2 (целевые объекты Build).
+﻿Построение начато 20.02.2018 20:07:07.
+     1>Проект "C:\Users\зль\Desktop\m\много\6,1\Поехали\Поехали.vcxproj" в узле 2 (целевые объекты Build).
        Файл проекта содержит ToolsVersion="12.0". Возможно, этот набор инструментов неизвестен или отсутствует (в этом случае проблему можно устранить, установив подходящую версию MSBuild), либо для данной сборки определено конкретное значение ToolsVersion в параметрах политики. Проект обрабатывается как имеющий ToolsVersion="4.0". Дополнительные сведения см. по ссылке http://go.microsoft.com/fwlink/?LinkId=291333.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Afor.cpp Kladez.cpp List.cpp main.cpp Posl_Pogov.cpp
@@ -7,19 +7,19 @@
          main.cpp
          List.cpp
          Kladez.cpp
-     1>c:\m\1.1\поехали\kladez.cpp(50): warning C4551: в вызове функции отсутствует список аргументов
+     1>c:\users\зль\desktop\m\много\6,1\поехали\kladez.cpp(50): warning C4551: в вызове функции отсутствует список аргументов
          Afor.cpp
          Создание кода...
-     1>c:\m\1.1\поехали\kladez.cpp(53): warning C4715: InKlad: значение возвращается не при всех путях выполнения
+     1>c:\users\зль\desktop\m\много\6,1\поехали\kladez.cpp(53): warning C4715: InKlad: значение возвращается не при всех путях выполнения
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\m\1.1\Debug\Поехали.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\m\1.1\Debug\Поехали.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\m\1.1\Debug\Поехали.lib" /MACHINE:X86 Debug\Afor.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\зль\Desktop\m\много\6,1\Debug\Поехали.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\зль\Desktop\m\много\6,1\Debug\Поехали.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\зль\Desktop\m\много\6,1\Debug\Поехали.lib" /MACHINE:X86 Debug\Afor.obj
          Debug\Kladez.obj
          Debug\List.obj
          Debug\main.obj
          Debug\Posl_Pogov.obj
-         Поехали.vcxproj -> C:\m\1.1\Debug\Поехали.exe
-     1>Построение проекта "C:\m\1.1\Поехали\Поехали.vcxproj" завершено (целевые объекты Build).
+         Поехали.vcxproj -> C:\Users\зль\Desktop\m\много\6,1\Debug\Поехали.exe
+     1>Построение проекта "C:\Users\зль\Desktop\m\много\6,1\Поехали\Поехали.vcxproj" завершено (целевые объекты Build).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:06.68
+Затраченное время: 00:00:04.31

@@ -17,7 +17,7 @@ void OutAf(Aforizm &aftor, ofstream &ofst);
 
 
 
-Kladez* InKlad(ifstream &ifst)   
+Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";

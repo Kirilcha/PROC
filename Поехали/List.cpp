@@ -1,20 +1,21 @@
 #include "Klad.h"
 #include "List.h"
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
 void OutKlad(Kladez* a, ofstream &ofst);
 Kladez* InKlad(ifstream &ifst);
 
-void Init(List **begin)        // инициализаци€ 
+void Init(List **begin)        //////// инициализаци€ 
 {
 	*begin = NULL;
 	*begin = new List;
 	(*begin)->next = NULL;
 }
 
-void Free(List **begin, ofstream &ofst)       // освобождаем пам€ть, дл€ этого начало передаем
+void Free(List **begin, ofstream &ofst)       /////  освобождаем пам€ть (дл€ этого начало передаем)
 {
 	if (*begin == 0)
 		return;
@@ -31,7 +32,7 @@ void Free(List **begin, ofstream &ofst)       // освобождаем пам€ть, дл€ этого н
 	ofst << " онтейнер освобожден!" << endl;
 }
 
-void InList(List **begin, ifstream &ifst)    // или же    
+void InList(List **begin, ifstream &ifst)    /////// или же    
 {
 	int kol = 0;
 	List *end = *begin;
@@ -74,6 +75,24 @@ void OutList(List **b, ofstream &ofst)        // в док
 		ofst << i << ": ";
 		OutKlad(&(p)->a, ofst);     /////// p->a € разъименовываю и отправл€ю значение переменной 
 		p = p->next;
+		i++;
+	}
+}
+
+
+void OutRect(List **begin, ofstream &ofst) 
+{
+	List *a = (*begin);
+	int i =1;
+	ofst << "“олько јфоризмы!" << endl;
+	while (a)
+	{
+		ofst << i << ": ";
+		if (a->a.key == Kladez::AFORIZM)
+			OutKlad(&(a)->a, ofst);
+		else
+			ofst <<"- " << endl;
+		a = a->next;
 		i++;
 	}
 }
