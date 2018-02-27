@@ -1,6 +1,7 @@
 #include "Klad.h"
 #include "List.h"
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -16,6 +17,7 @@ void Init(List **begin)        //////// инициализация
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void Free(List **begin, ofstream &ofst)       //  освобождаем память (для этого начало передаем)
 =======
 void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для этого начало передаем)
@@ -23,6 +25,9 @@ void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для это
 =======
 void Free(List **begin, ofstream &ofst)       // освобождаем память (для этого начало передаем)
 >>>>>>> master
+=======
+void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для этого начало передаем)
+>>>>>>> 2-1-5
 {
 	if (*begin == 0)
 		return;
@@ -40,10 +45,14 @@ void Free(List **begin, ofstream &ofst)       // освобождаем память (для этого н
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void InList(List **begin, ifstream &ifst)    /////// или же    
 =======
 void InList(List **begin, ifstream &ifst)   
 >>>>>>> master
+=======
+void InList(List **begin, ifstream &ifst)    /////// или же    
+>>>>>>> 2-1-5
 {
 	int kol = 0;
 	List *end = *begin;
@@ -94,6 +103,24 @@ void OutList(List **b, ofstream &ofst)      // в док
 		OutKlad(&(p)->a, ofst);     // p->a я разъименовываю и отправляю значение переменной 
 >>>>>>> master
 		p = p->next;
+		i++;
+	}
+}
+
+
+void OutRect(List **begin, ofstream &ofst) 
+{
+	List *a = (*begin);
+	int i =1;
+	ofst << "Только Афоризмы!" << endl;
+	while (a)
+	{
+		ofst << i << ": ";
+		if (a->a.key == Kladez::AFORIZM)
+			OutKlad(&(a)->a, ofst);
+		else
+			ofst <<"- " << endl;
+		a = a->next;
 		i++;
 	}
 }

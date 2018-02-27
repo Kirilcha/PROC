@@ -17,10 +17,14 @@ void OutZagad(Zagadki &zagad, ofstream &ofst);
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 =======
 Kladez* InKlad(ifstream &ifst) 
 >>>>>>> master
+=======
+Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
+>>>>>>> 2-1-5
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";
