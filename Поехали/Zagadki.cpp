@@ -9,5 +9,9 @@ void readZagad(Zagadki &zagad, ifstream &ifst)
 
 void OutZagad(Zagadki &zagad, ofstream &ofst)
 {
+<<<<<<< HEAD
 	ofst << "\n Ответ на загадку: " << zagad.otvet << endl;
+=======
+	ofst << " Ответ на загадку: " << zagad.otvet << endl;
+>>>>>>> master
 }

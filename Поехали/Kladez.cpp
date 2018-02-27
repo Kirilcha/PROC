@@ -16,7 +16,7 @@ void OutZagad(Zagadki &zagad, ofstream &ofst);
 
 
 
-Kladez* InKlad(ifstream &ifst)   
+Kladez* InKlad(ifstream &ifst) 
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";
@@ -62,6 +62,7 @@ Kladez* InKlad(ifstream &ifst)
 void OutKlad(Kladez* a, ofstream &ofst)        // в док
 {
 
+<<<<<<< HEAD
 	char s[] = ".,?!:-'\"";
 	int Kol = 0;
 	for (int i = 0; i < 8; i++)
@@ -81,6 +82,10 @@ void OutKlad(Kladez* a, ofstream &ofst)        // в док
 	ofst << '"' << a->fraza << '"' << "\n ( оличество знаков препинани€ : " << Kol << ")";
 
 
+=======
+
+	ofst << '"' << a->fraza << '"'; 
+>>>>>>> master
 	switch (a->key)
 	{
 	case Kladez::key::AFORIZM:OutAf(a->afor, ofst);
