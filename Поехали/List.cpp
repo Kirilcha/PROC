@@ -14,7 +14,11 @@ void Init(List **begin)        //////// инициализация
 	(*begin)->next = NULL;
 }
 
+<<<<<<< HEAD
 void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для этого начало передаем)
+=======
+void Free(List **begin, ofstream &ofst)       // освобождаем память (для этого начало передаем)
+>>>>>>> master
 {
 	if (*begin == 0)
 		return;
@@ -31,7 +35,11 @@ void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для это
 	ofst << "Контейнер освобожден!" << endl;
 }
 
+<<<<<<< HEAD
 void InList(List **begin, ifstream &ifst)    /////// или же    
+=======
+void InList(List **begin, ifstream &ifst)   
+>>>>>>> master
 {
 	int kol = 0;
 	List *end = *begin;
@@ -40,14 +48,14 @@ void InList(List **begin, ifstream &ifst)    /////// или же
 	{
 		if (kol == 0)
 		{
-			(*begin)->a = (*InKlad(ifst));   // который считывает первую цифру
+			(*begin)->a = (*InKlad(ifst));   // считывает первую цифру
 			(*begin)->next = NULL;
 			kol++;
 		}
 		else
 		{
-			end->next = new List; // указатель выделяет память под новый эл
-			end = end->next;  // и авняется след эл 
+			end->next = new List; // указатель выделяет память под новый элемент
+			end = end->next;  // равняется след эл 
 			end->a = (*InKlad(ifst));
 			end->next = NULL;
 			kol++;
@@ -72,7 +80,7 @@ void OutList(List **b, ofstream &ofst)        // в док
 	while (p)
 	{
 		ofst << i << ": ";
-		OutKlad(&(p)->a, ofst);     /////// p->a я разъименовываю и отправляю значение переменной 
+		OutKlad(&(p)->a, ofst);     // p->a я разъименовываю и отправляю значение переменной 
 		p = p->next;
 		i++;
 	}
