@@ -1,6 +1,7 @@
 #include "Klad.h"
 #include "List.h"
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ void Init(List **begin)        // инициализация
 	(*begin)->next = NULL;
 }
 
-void Free(List **begin, ofstream &ofst)       // освобождаем память, для этого начало передаем
+void Free(List **begin, ofstream &ofst)       //  освобождаем память (для этого начало передаем)
 {
 	if (*begin == 0)
 		return;
@@ -72,8 +73,56 @@ void OutList(List **b, ofstream &ofst)        // в док
 	while (p)
 	{
 		ofst << i << ": ";
-		OutKlad(&(p)->a, ofst);     /////// p->a я разъименовываю и отправляю значение переменной 
+		OutKlad(&(p)->a, ofst);     // p->a я разыменовываю и отправляю значение переменной 
 		p = p->next;
 		i++;
 	}
 }
+
+bool prov(Kladez a, Kladez b)
+{
+	return a.fraza < b.fraza;
+}
+
+void Sort(List **begin)
+{
+	char p;
+	bool proverka;
+	cout << "\nКак отсортировать? По возрастанию (>) или убыванию (<): ";
+	cin >> p;
+	switch (p)
+	{
+		case '>':
+		{
+					proverka = 0;
+					break;
+		}
+	
+		case '<':
+		{
+					proverka = 1;
+					break;
+		}
+		default:
+		{
+				   cout << "Ошибка!" << endl;
+		}
+	}
+	Kladez t3;
+	List* t1;
+	List * t2;
+	
+	for (t1 = (*begin); t1; t1 = t1->next)
+	{
+		for (t2 = (*begin); t2; t2 = t2->next)
+		{
+			if (prov(t1->a, t2->a) - proverka)
+			{
+				t3 = t1->a;
+				t1->a = t2->a;
+				t2->a = t3;
+			}
+		}
+	}
+}
+

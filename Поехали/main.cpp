@@ -10,6 +10,7 @@ void Init(List **begin);
 void Free(List **begin, ofstream &ofst);
 void InList(List **begin, ifstream &ifst);
 void OutList(List **b, ofstream &ofst);
+void Sort(List **begin);
 
 int main()
 {
@@ -37,9 +38,10 @@ int main()
 
 	Init(&begin);
 	InList(&begin, in);
+	Sort(&begin);
 	OutList(&begin, out);
 	Free(&begin, out);
-	cout << "Stop" << endl;
+	cout << endl << "Stop" << endl;
 
 	in.close();
 	out.close();
