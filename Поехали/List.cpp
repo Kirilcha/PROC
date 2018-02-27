@@ -18,6 +18,7 @@ void Init(List **begin)        //////// инициализация
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void Free(List **begin, ofstream &ofst)       //  освобождаем память (для этого начало передаем)
 =======
 void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для этого начало передаем)
@@ -28,6 +29,9 @@ void Free(List **begin, ofstream &ofst)       // освобождаем память (для этого н
 =======
 void Free(List **begin, ofstream &ofst)       /////  освобождаем память (для этого начало передаем)
 >>>>>>> 2-1-5
+=======
+void Free(List **begin, ofstream &ofst)       //  освобождаем память (для этого начало передаем)
+>>>>>>> 2-1-4
 {
 	if (*begin == 0)
 		return;
@@ -98,15 +102,20 @@ void OutList(List **b, ofstream &ofst)      // в док
 	{
 		ofst << i << ": ";
 <<<<<<< HEAD
+<<<<<<< HEAD
 		OutKlad(&(p)->a, ofst);     
 =======
 		OutKlad(&(p)->a, ofst);     // p->a я разъименовываю и отправляю значение переменной 
 >>>>>>> master
+=======
+		OutKlad(&(p)->a, ofst);     // p->a я разыменовываю и отправляю значение переменной 
+>>>>>>> 2-1-4
 		p = p->next;
 		i++;
 	}
 }
 
+<<<<<<< HEAD
 
 void OutRect(List **begin, ofstream &ofst) 
 {
@@ -124,3 +133,52 @@ void OutRect(List **begin, ofstream &ofst)
 		i++;
 	}
 }
+=======
+bool prov(Kladez a, Kladez b)
+{
+	return a.fraza < b.fraza;
+}
+
+void Sort(List **begin)
+{
+	char p;
+	bool proverka;
+	cout << "\nКак отсортировать? По возрастанию (>) или убыванию (<): ";
+	cin >> p;
+	switch (p)
+	{
+		case '>':
+		{
+					proverka = 0;
+					break;
+		}
+	
+		case '<':
+		{
+					proverka = 1;
+					break;
+		}
+		default:
+		{
+				   cout << "Ошибка!" << endl;
+		}
+	}
+	Kladez t3;
+	List* t1;
+	List * t2;
+	
+	for (t1 = (*begin); t1; t1 = t1->next)
+	{
+		for (t2 = (*begin); t2; t2 = t2->next)
+		{
+			if (prov(t1->a, t2->a) - proverka)
+			{
+				t3 = t1->a;
+				t1->a = t2->a;
+				t2->a = t3;
+			}
+		}
+	}
+}
+
+>>>>>>> 2-1-4

@@ -9,9 +9,15 @@
 
 struct Kladez
 {
+<<<<<<< HEAD
 	enum key { AFORIZM, POSL_P, ZAGADKI };
 	key key;
 	int ocenka;
+=======
+	enum key { AFORIZM = 1, POSL_P, ZAGADKI };
+	key key;
+	int kol;
+>>>>>>> 2-1-4
 	std::string fraza;
 	union
 	{

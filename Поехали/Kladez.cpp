@@ -18,6 +18,7 @@ void OutZagad(Zagadki &zagad, ofstream &ofst);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 =======
 Kladez* InKlad(ifstream &ifst) 
@@ -34,19 +35,47 @@ Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 	ifst.getline(prov, 10, '\n');
 	int key = 4;
 	if ((_stricmp(od, prov) == 0) || (prov[0] == '1'))
+=======
+int Kol_Sim(Kladez* a)
+{
+	char s[] = ".,?!;:-'\"";
+	a->kol = 0;
+	for (int i = 0; i < 8; i++)
+>>>>>>> 2-1-4
 	{
-		key = 1;
+		for (int j = 0; j < a->fraza.size(); j++)
+		{
+			if (s[i] == a->fraza[j])
+			{
+				if (a->fraza[j] == '.' && a->fraza[j + 1] == '.' && a->fraza[j - 1] == '.')
+				{
+					a->kol -= 2;
+				}
+				a->kol++;
+			}
+		}
 	}
-	if ((_stricmp(dv, prov) == 0) || (prov[0] == '2'))
-	{
-		key = 2;
-	}
+<<<<<<< HEAD
 	if ((_stricmp(gg, prov) == 0) || (prov[0] == '3'))
 	{
 		key = 3;
 	}
 	getline(ifst, klad->fraza);
+=======
+	return a->kol;
+}
 
+
+>>>>>>> 2-1-4
+
+Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
+{
+	Kladez *klad = new Kladez;
+	int key;
+	ifst >> key;        /// считываем ключ определяющий эл
+	ifst.get();
+	getline(ifst, klad->fraza);
+	Kol_Sim(klad);
 	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
 	{
 	case 1:
@@ -64,7 +93,14 @@ Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 		klad->key = Kladez::key::ZAGADKI;
 		readZagad(klad->zagad, ifst);
 		return klad;
+<<<<<<< HEAD
 >>>>>>> master
+=======
+	case 3:
+		klad->key = Kladez::key::ZAGADKI;
+		readZagad(klad->zagad, ifst);
+		return klad;
+>>>>>>> 2-1-4
 	default:    // нет совпадений -> нет записи
 		return 0;
 	}
@@ -73,8 +109,11 @@ Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 	return klad;
 }
 
+
+
 void OutKlad(Kladez* a, ofstream &ofst)        // в док
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	ofst << '"' << a->fraza << '"';
 =======
@@ -103,6 +142,10 @@ void OutKlad(Kladez* a, ofstream &ofst)        // в док
 
 	ofst << '"' << a->fraza << '"'; 
 >>>>>>> master
+=======
+	ofst << '"' << a->fraza << '"' << " (Количество знаков препинания : " << a->kol << ")";
+
+>>>>>>> 2-1-4
 	switch (a->key)
 	{
 	case Kladez::key::AFORIZM:OutAf(a->afor, ofst);
@@ -114,6 +157,7 @@ void OutKlad(Kladez* a, ofstream &ofst)        // в док
 	default:
 		ofst << "Ошибка!" << endl;
 	}
+<<<<<<< HEAD
 	if (a->ocenka > 10 || a->ocenka < 0)
 	{
 		ofst << "Оценка не соответствует 10 бальной шкале!" << endl;
@@ -123,3 +167,9 @@ void OutKlad(Kladez* a, ofstream &ofst)        // в док
 		ofst << "Субъективная оценка изречения по десятибалльной шкале = " << a->ocenka << endl;
 	}
 }
+=======
+}
+
+
+
+>>>>>>> 2-1-4
