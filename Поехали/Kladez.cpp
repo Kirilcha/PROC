@@ -15,9 +15,17 @@ void OutAf(Aforizm &aftor, ofstream &ofst);
 
 int Kol_Sim(Kladez* a)
 {
-	char s[] = ".,?!;:-'\"";
-	a->kol = 0;
-	for (int i = 0; i < 8; i++)
+	Kladez *klad = new Kladez;
+	char od[] = "afor";
+	char dv[] = "posl";
+	char prov[10];
+	ifst.getline(prov, 10, '\n');
+	int key = 4;
+	if ((_stricmp(od, prov) == 0) || (prov[0] == '1'))
+	{
+		key = 1;
+	}
+	if ((_stricmp(dv, prov) == 0) || (prov[0] == '2'))
 	{
 		for (int j = 0; j < a->fraza.size(); j++)
 		{
@@ -48,23 +56,40 @@ Kladez* InKlad(ifstream &ifst)
 	{
 	case 1:
 		klad->key = Kladez::key::AFORIZM;
-		readAf(klad->afor, ifst);
+		readAf(klad->afor, ifst); 
 		return klad; 
 	case 2:
 		klad->key = Kladez::key::POSL_P;
 		readPosl(klad->poslov, ifst);
 		return klad;
-	default: 
+	default:    
 		exit;
 	}
 
 }
 
 
-
-void OutKlad(Kladez* a, ofstream &ofst) 
+void OutKlad(Kladez* a, ofstream &ofst)
 {
 	ofst << '"' << a->fraza << '"' << " (Количество знаков препинания : " << a->kol << ")";
+
+	char s[] = ".,?!:-'\"";
+	int Kol = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < a->fraza.size(); j++)
+		{
+			if (s[i] == a->fraza[j])
+			{
+				if (a->fraza[j] == '.' && a->fraza[j + 1] == '.' && a->fraza[j - 1] == '.')
+				{
+					Kol -= 2;
+				}
+				Kol++;
+			}
+		}
+	}
+	ofst << '"' << a->fraza << '"' << "\n (Количество знаков препинания : " << Kol << ")";
 
 	switch (a->key)
 	{

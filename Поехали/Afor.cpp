@@ -9,5 +9,5 @@ void readAf(Aforizm &afor, ifstream &ifst)
 
 void OutAf(Aforizm &aftor, ofstream &ofst)
 {
-	ofst << " Автор данного высказывания: " << aftor.aftor << endl;
+	ofst << "\n Автор данного высказывания: " << aftor.aftor << endl;
 }
