@@ -7,15 +7,14 @@ using namespace std;
 void OutKlad(Kladez* a, ofstream &ofst);
 Kladez* InKlad(ifstream &ifst);
 
-void Init(List **begin) 
+void Init(List **begin)  
 {
 	*begin = NULL;
 	*begin = new List;
 	(*begin)->next = NULL;
 }
 
-
-void Free(List **begin, ofstream &ofst)
+void Free(List **begin, ofstream &ofst) 
 {
 	if (*begin == 0)
 		return;
@@ -32,7 +31,7 @@ void Free(List **begin, ofstream &ofst)
 	ofst << "Контейнер освобожден!" << endl;
 }
 
-void InList(List **begin, ifstream &ifst)  
+void InList(List **begin, ifstream &ifst)   
 {
 	int kol = 0;
 	List *end = *begin;
@@ -48,7 +47,7 @@ void InList(List **begin, ifstream &ifst)
 		else
 		{
 			end->next = new List;
-			end = end->next;
+			end = end->next; 
 			end->a = (*InKlad(ifst));
 			end->next = NULL;
 			kol++;
@@ -57,7 +56,7 @@ void InList(List **begin, ifstream &ifst)
 }
 
 
-void OutList(List **b, ofstream &ofst)  
+void OutList(List **b, ofstream &ofst)
 {
 	List *p = *b;
 	int i = 1;
@@ -73,7 +72,7 @@ void OutList(List **b, ofstream &ofst)
 	while (p)
 	{
 		ofst << i << ": ";
-		OutKlad(&(p)->a, ofst);   
+		OutKlad(&(p)->a, ofst);     
 		p = p->next;
 		i++;
 	}

@@ -8,8 +8,9 @@
 
 struct Kladez
 {
-	enum key { AFORIZM = 1, POSL_P };
+	enum key { AFORIZM, POSL_P, ZAGADKI };
 	key key;
+	int kol;
 	std::string fraza;
 	union
 	{
