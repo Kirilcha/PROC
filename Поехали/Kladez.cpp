@@ -17,7 +17,7 @@ void OutAf(Aforizm &aftor, ofstream &ofst);
 
 
 
-Kladez* InKlad(ifstream &ifst)   
+Kladez* InKlad(ifstream &ifst)
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";
@@ -52,9 +52,9 @@ Kladez* InKlad(ifstream &ifst)
 
 }
 
-void OutKlad(Kladez* a, ofstream &ofst)     
-{
 
+void OutKlad(Kladez* a, ofstream &ofst)  
+{
 	ofst << '"' << a->fraza << '"';
 	switch (a->key)
 	{

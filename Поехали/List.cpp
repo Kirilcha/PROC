@@ -7,14 +7,15 @@ using namespace std;
 void OutKlad(Kladez* a, ofstream &ofst);
 Kladez* InKlad(ifstream &ifst);
 
-void Init(List **begin)       
+void Init(List **begin) 
 {
 	*begin = NULL;
 	*begin = new List;
 	(*begin)->next = NULL;
 }
 
-void Free(List **begin, ofstream &ofst)    
+
+void Free(List **begin, ofstream &ofst)
 {
 	if (*begin == 0)
 		return;
@@ -40,14 +41,14 @@ void InList(List **begin, ifstream &ifst)
 	{
 		if (kol == 0)
 		{
-			(*begin)->a = (*InKlad(ifst));  
+			(*begin)->a = (*InKlad(ifst));
 			(*begin)->next = NULL;
 			kol++;
 		}
 		else
 		{
 			end->next = new List;
-			end = end->next; 
+			end = end->next;
 			end->a = (*InKlad(ifst));
 			end->next = NULL;
 			kol++;
