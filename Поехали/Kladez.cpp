@@ -17,7 +17,7 @@ void OutAf(Aforizm &aftor, ofstream &ofst);
 
 
 
-Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
+Kladez* InKlad(ifstream &ifst)
 {
 	Kladez *klad = new Kladez;
 	char od[] = "afor";
@@ -36,23 +36,23 @@ Kladez* InKlad(ifstream &ifst)   // количетво общее можно сюда присобачить
 
 	getline(ifst, klad->fraza);
 
-	switch (key)  // в зависимости, от того, что в ключе, туда и отпраит новые данные 
+	switch (key)
 	{
 	case 1:
 		klad->key = Kladez::key::AFORIZM;
-		readAf(klad->afor, ifst);  // отправляем в функцию(АФ) полученные данные
-		return klad; // возвращаем полученный эл
+		readAf(klad->afor, ifst);
+		return klad;
 	case 2:
 		klad->key = Kladez::key::POSL_P;
 		readPosl(klad->poslov, ifst);
 		return klad;
-	default:    // нет совпадений -> нет записи
+	default:
 		exit;
 	}
 
 }
 
-void OutKlad(Kladez* a, ofstream &ofst)        // в док
+void OutKlad(Kladez* a, ofstream &ofst)
 {
 
 	ofst << '"' << a->fraza << '"';

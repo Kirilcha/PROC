@@ -39,7 +39,6 @@ int main()
 	Init(&begin);
 	InList(&begin, in);
 	OutRect(&begin, out);
-	//OutList(&begin, out);
 	Free(&begin, out);
 	cout << "Stop" << endl;
 
