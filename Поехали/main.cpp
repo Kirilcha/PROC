@@ -10,11 +10,6 @@ void Init(List **begin);
 void Free(List **begin, ofstream &ofst);
 void InList(List **begin, ifstream &ifst);
 void OutList(List **b, ofstream &ofst);
-<<<<<<< HEAD
-void OutRect(List **begin, ofstream &ofst);
-=======
-void Sort(List **begin);
->>>>>>> 2-1-4
 
 int main()
 {
@@ -42,15 +37,9 @@ int main()
 
 	Init(&begin);
 	InList(&begin, in);
-<<<<<<< HEAD
-	OutRect(&begin, out);
-	//OutList(&begin, out);
-=======
-	Sort(&begin);
 	OutList(&begin, out);
->>>>>>> 2-1-4
 	Free(&begin, out);
-	cout << endl << "Stop" << endl;
+	cout << "Stop" << endl;
 
 	in.close();
 	out.close();

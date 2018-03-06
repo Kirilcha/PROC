@@ -10,5 +10,5 @@ void readPosl(Poslovica_P &posl, ifstream &ifst)
 
 void OutPosl(Poslovica_P &posl, ofstream &ofst)
 {
-	ofst << "\n Страна данной пословицы/поговорки: " << posl.strana << endl;
+	ofst << " Страна данной пословицы/поговорки: " << posl.strana << endl;
 }
