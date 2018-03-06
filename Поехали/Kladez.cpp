@@ -48,18 +48,18 @@ Kladez* InKlad(ifstream &ifst)
 	ifst >> key;
 	ifst.get();
 	getline(ifst, klad->fraza);
-	Kol_Sim(klad);
-	switch (key) 
+	Kol_Sim(klad); 
+	switch (key)
 	{
 	case 1:
 		klad->key = Kladez::key::AFORIZM;
-		readAf(klad->afor, ifst); 
-		return klad; 
+		readAf(klad->afor, ifst);
+		return klad;
 	case 2:
 		klad->key = Kladez::key::POSL_P;
 		readPosl(klad->poslov, ifst);
 		return klad;
-	default:    
+	default:
 		exit;
 	}
 
