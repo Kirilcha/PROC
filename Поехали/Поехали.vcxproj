@@ -68,7 +68,6 @@
     <ClInclude Include="Klad.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Posl_Pogov.h" />
-    <ClInclude Include="Zagadki.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Afor.cpp" />
@@ -76,7 +75,6 @@
     <ClCompile Include="List.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Posl_Pogov.cpp" />
-    <ClCompile Include="Zagadki.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
