@@ -2,14 +2,13 @@
 #define _Klad_
 
 #include "Aforizm.h"
-#include "Zagadki.h"
 #include "Posl_Pogov.h"
 #include <string>
 
 
 struct Kladez
 {
-	enum key { AFORIZM, POSL_P, ZAGADKI };
+	enum key { AFORIZM = 1, POSL_P };
 	key key;
 	int ocenka;
 	std::string fraza;
@@ -17,7 +16,6 @@ struct Kladez
 	{
 		Aforizm afor;
 		Poslovica_P poslov;
-		Zagadki zagad;
 	};
 };
 #endif
