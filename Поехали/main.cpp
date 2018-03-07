@@ -10,6 +10,7 @@ void Init(List **begin);
 void Free(List **begin, ofstream &ofst);
 void InList(List **begin, ifstream &ifst);
 void OutList(List **b, ofstream &ofst);
+void Sort(List **begin);
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
 	in.open("1.txt");
 	if (!in.is_open())
 	{
-		cout << "Ошибка с файлом";
+		cout << "Ошибка с входным файлом";
 		return -1;
 	}
 
@@ -27,24 +28,24 @@ int main()
 	out.open("2.txt");
 	if (!out.is_open())
 	{
-		cout << "Ошибка с файлом";
+		cout << "Ошибка с выходным файлом";
 		return -1;
 	}
 
-	cout << "Start" << endl;
+	cout << "Считывание данных" << endl;
 
 	List* begin;
 
 	Init(&begin);
 	InList(&begin, in);
+	Sort(&begin);
 	OutList(&begin, out);
-	OutRect(&begin, out);
 	Free(&begin, out);
-	cout << "Stop" << endl;
+	cout << endl << "Запись данных" << endl;
 
 	in.close();
 	out.close();
-
+		cout << "\nРабота программы завершена корректно" << endl;
 	_getch();
 	return 0;
 }
