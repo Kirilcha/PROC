@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include "Klad.h"
+#include "List.h"
 #include "Aforizm.h"
 #include "Posl_Pogov.h"
 #include <fstream>
@@ -67,4 +68,56 @@ void OutKlad(Kladez* a, ofstream &ofst)
 	}
 }
 
-
+void MultiMethod(List **b, ofstream &ofst)
+{
+	ofst << "Мультиметод." << endl;
+	while ((*b)->next != NULL)
+	{
+		switch ((*b)->a.key)
+		{
+			case Kladez::AFORIZM:
+			{
+				switch ((*b)->next->a.key)
+				{
+					case Kladez::AFORIZM:
+					{
+						ofst << "Афоризм и Афоризм." << endl;
+						break;
+					}
+					case Kladez::POSL_P:
+					{
+						ofst << "Афоризм и Пословица." << endl;
+						break;
+					}
+					default:
+						ofst << "Левый тип." << endl;
+				}
+				break;
+			}
+			case Kladez::POSL_P:
+			{
+				switch ((*b)->next->a.key)
+				{
+					case Kladez::AFORIZM:
+					{
+						ofst << "Пословица и Афоризм." << endl;
+						break;
+					}
+					case Kladez::POSL_P:
+					{
+						ofst << "Пословица и Пословица." << endl;
+						break;
+					}
+					default:
+						ofst << "Левый тип." << endl;
+				}
+				break;
+			}
+			default:
+				ofst << "Левый тип." << endl;
+		}
+		OutKlad(&(*b)->a, ofst);
+		OutKlad(&(*b)->next->a, ofst);
+		(*b) = (*b)->next;
+	}
+}
