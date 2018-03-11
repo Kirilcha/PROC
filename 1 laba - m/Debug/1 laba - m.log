@@ -1,0 +1,27 @@
+﻿Построение начато 10.03.2018 13:14:50.
+     1>Проект "C:\Users\зль\Desktop\proc-2-5\1 laba - m\1 laba - m.vcxproj" в узле 2 (целевые объекты Build).
+       Файл проекта содержит ToolsVersion="15.0". Возможно, этот набор инструментов неизвестен или отсутствует (в этом случае проблему можно устранить, установив подходящую версию MSBuild), либо для данной сборки определено конкретное значение ToolsVersion в параметрах политики. Проект обрабатывается как имеющий ToolsVersion="4.0". Дополнительные сведения см. по ссылке http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Conteiners.cpp main.cpp Boxes.cpp Shapes.cpp Sphere.cpp Conteiners_Out.cpp
+         Conteiners_Out.cpp
+         Sphere.cpp
+         Shapes.cpp
+         Boxes.cpp
+         Conteiners.cpp
+         Создание кода...
+         Компиляция...
+         main.cpp
+         Создание кода...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\зль\Desktop\proc-2-5\Debug\Lab 2-5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\зль\Desktop\proc-2-5\Debug\Lab 2-5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\зль\Desktop\proc-2-5\Debug\Lab 2-5.lib" /MACHINE:X86 Debug\Conteiners.obj
+         Debug\main.obj
+         Debug\Boxes.obj
+         Debug\Shapes.obj
+         Debug\Sphere.obj
+         Debug\Conteiners_Out.obj
+         1 laba - m.vcxproj -> C:\Users\зль\Desktop\proc-2-5\Debug\Lab 2-5.exe
+     1>Построение проекта "C:\Users\зль\Desktop\proc-2-5\1 laba - m\1 laba - m.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:08.23

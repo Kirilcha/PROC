@@ -1,0 +1,21 @@
+Filled container. 
+Container contains 8 elements.
+0: It is Box: x = 3, y = 4, z = 5
+1: It is Sphere: r = 7
+2: It is Box: x = 15, y = 18, z = 25
+3: It is Sphere: r = 11
+4: It is Box: x = 7, y = 8, z = 5
+5: It is Sphere: r = 22
+6: It is Box: x = 11, y = 17, z = 21
+7: It is Box: x = 99, y = 78, z = 12
+Only box.
+0: It is Box: x = 3, y = 4, z = 5
+1: 
+2: It is Box: x = 15, y = 18, z = 25
+3: 
+4: It is Box: x = 7, y = 8, z = 5
+5: 
+6: It is Box: x = 11, y = 17, z = 21
+7: It is Box: x = 99, y = 78, z = 12
+Empty container. 
+Container contains 0 elements.
